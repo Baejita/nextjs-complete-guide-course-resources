@@ -5,6 +5,7 @@ import classes from "./main-header.module.css";
 import Image from "next/image";
 import MainHeaderBlackground from "./main-header-background";
 import { usePathname } from "next/navigation";
+import Navigation from "./navigation";
 function MainHeader() {
   const path = usePathname();
   console.log(path);
@@ -25,23 +26,11 @@ function MainHeader() {
           <div>
             <ul>
               <li>
-                <Link
-                  href="/meals"
-                  className={path.startsWith("/meals") ? classes.active : null}
-                >
-                  Browse Meals
-                </Link>
+                <Navigation href="/meals">Browse Meals</Navigation>
               </li>
 
               <li>
-                <Link
-                  href="/community"
-                  className={
-                    path.startsWith("/community") ? classes.active : null
-                  }
-                >
-                  Foodies Community
-                </Link>
+                <Navigation href="/community">Foodies Community</Navigation>
               </li>
             </ul>
           </div>
