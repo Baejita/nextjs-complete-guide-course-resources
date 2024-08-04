@@ -11,6 +11,7 @@ html {
 body {
   margin: 0;
   background: radial-gradient(#282c34, #282c34);
+ 
 }
 
 .header-background {
@@ -32,6 +33,7 @@ svg {
 .error {
   margin-top: 5rem;
   text-align: center;
+  
 }
 
 .not-found h1,
@@ -47,6 +49,7 @@ svg {
   background-size: cover;
   background-position: center;
   font-family: 'Montserrat', sans-serif;
+  
 }
 
 .not-found p,
@@ -54,4 +57,6 @@ svg {
   font-size: 1.5rem;
   font-weight: 500;
   color: #ddd8d8;
+  text-decoration: none;
 }
+
