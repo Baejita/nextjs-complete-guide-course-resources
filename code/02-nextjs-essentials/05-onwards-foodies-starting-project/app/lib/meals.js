@@ -1,9 +1,15 @@
 import sql from "better-sqlite3";
 
 const db = sql("meals.db");
-export async function getMeals() {
-  await new Promise((resolve) => setTimeout(resolve, 2500));
 
-  throw new Error("Loading meals failed");
+export async function getMeals() {
+  await new Promise((resolve) => setTimeout(resolve, 1900));
+
+  // throw new Error("Loading meals failed");
   return db.prepare("SELECT * FROM meals").all();
+}
+
+//สร้าง
+export async function getMeal(slug) {
+  return db.prepare("SELECT * FROM meals WHERE slug = ?").get(slug);
 }
