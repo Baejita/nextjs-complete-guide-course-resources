@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 import Navigation from "./navigation";
 function MainHeader() {
   const path = usePathname();
-  console.log(path);
+
   return (
     <>
       <MainHeaderBlackground background />
