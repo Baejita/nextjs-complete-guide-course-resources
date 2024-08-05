@@ -1,6 +1,8 @@
 import ImagePicker from "@/app/components/meals/image-picker";
 import classes from "./page.module.css";
 import { shareMeal } from "@/app/lib/action";
+import MealSubmitPending from "@/app/components/meals/meal-submit-pending";
+
 //** การใช้ action เพื่อย้ายฟังชั่นที่เป้นฝั่งเซิฟเวอร์ ไปอยู่ในนั้นแล้วค่ยอเรียกใช้ action {sharemeal } ในform */
 export default function ShareMealPage() {
   return (
@@ -42,7 +44,7 @@ export default function ShareMealPage() {
           </p>
           <ImagePicker label="Your image" name="image" />
           <p className={classes.actions}>
-            <button type="submit">Share Meal</button>
+            <MealSubmitPending />
           </p>
         </form>
       </main>

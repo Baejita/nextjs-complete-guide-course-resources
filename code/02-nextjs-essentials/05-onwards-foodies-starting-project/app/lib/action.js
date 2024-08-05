@@ -1,4 +1,8 @@
 "use server";
+
+import { redirect } from "next/navigation";
+import { saveMeal } from "./meals";
+
 export async function shareMeal(formData) {
   const meal = {
     title: formData.get("title"),
@@ -6,7 +10,9 @@ export async function shareMeal(formData) {
     instructions: formData.get("instructions"),
     image: formData.get("image"),
     creator: formData.get("name"),
-    crator_email: formData.get("email"),
+    creator_email: formData.get("email"),
   };
-  console.log(meal);
+  await saveMeal(meal); // จะรีเทิร์น promis ต้องใส่ await ด้วย
+
+  redirect("/meals");
 }
