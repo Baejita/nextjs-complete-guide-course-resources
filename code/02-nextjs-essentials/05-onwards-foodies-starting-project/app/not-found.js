@@ -4,7 +4,7 @@ export default function NotFound() {
   return (
     <main className="not-found">
       <h1>Page Not Found</h1>
-      <p>Sorry, the page you're looking for doesn't exist.</p>
+      <p>Sorry, the page you&apos;re looking for doesn&apos;t exist.</p>
       <Link href="/">
         <p>Go back to the home page</p>
       </Link>
